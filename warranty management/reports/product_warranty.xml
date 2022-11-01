@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="product_warranty">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <h2>Product warranty report</h2>
+                <table style="width:100%" class="table table-sm">
+                        <th>
+                            <tr style="height:60px">
+                                <th>Sl. No</th>
+                                <th>Customer</th>
+                                <th>Product Name</th>
+                                <th>Invoice Number</th>
+                                <th>Lot/Serial Number</th>
+                                <th>State</th>
+                            </tr>
+                        </th>
+                        <t t-foreach="result" t-as="i">
+                            <tr style="height:50px" class="bg-light">
+                                <td>
+                                    <t t-esc="i['name']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="i['custname']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="i['productname']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="i['invoicename']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="i['lotname']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="i['state']"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+            </t>
+        </t>
+    </template>
+
+    <!--    <template id="product_warranty">-->
+    <!--        <t t-call="web.html_container">-->
+    <!--            <t t-foreach="docs" t-as="doc">-->
+    <!--                <t t-call="product_warranty_report"/>-->
+    <!--            </t>-->
+    <!--        </t>    -->
+    <!--    </template>-->
+</odoo>

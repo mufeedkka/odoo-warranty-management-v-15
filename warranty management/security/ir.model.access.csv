@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_warranty,access.warranty,model_warranty,base.group_user,1,1,1,1
+access_warranty_report,access.warranty.report,model_warranty_report,base.group_user,1,1,1,1
+

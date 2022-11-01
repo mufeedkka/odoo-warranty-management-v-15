@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="warranty_report" model="ir.ui.view">
+        <field name="name">warranty report</field>
+        <field name="model">warranty.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                <field name="product_ids" widget="many2many_tags" options="{'no_create': True, 'no_create_edit':True}" string="Products"/>
+                <field name="customer_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                </group>
+                <footer>
+                <button name="print_report" type="object" string="Print PDF" class="btn-primary"/>
+                <button name="print_xls" type="object" string="Print XLS" class="btn-primary"/>
+                </footer>
+            </form>
+
+        </field>
+    </record>
+
+    <!--records start-->
+    <record id="report_action" model="ir.actions.act_window">
+        <field name="name">report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warranty.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="warranty_report"/>
+        <field name="target">new</field>
+    </record>
+
+    <!--records end-->
+
+</odoo>

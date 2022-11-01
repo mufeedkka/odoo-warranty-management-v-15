@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="warranty_report_print" model="ir.actions.report">
+            <field name="name">warranty report print</field>
+            <field name="model">warranty</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">warranty.product_warranty</field>
+            <field name="report_file">warranty.product_warranty</field>
+
+        </record>
+
+<!--        <record id="warranty_xls" model="ir.actions.report">-->
+<!--            <field name="name">warranty report print xls</field>-->
+<!--            <field name="model">warranty</field>-->
+<!--            <field name="report_type">xlsx</field>-->
+<!--            <field name="report_name">warranty.product_warranty_xls</field>-->
+<!--            <field name="report_file">warranty.product_warranty_xls</field>-->
+<!--        </record>-->
+
+<!--        <report id="warranty_report_print_xls"-->
+<!--                model="warranty"-->
+<!--                string="warrantyxlsx"-->
+<!--                report_type="xlsx"-->
+<!--                name="warranty.product_warranty_xls.xlsx"-->
+<!--                file="warranty.product_warranty_xls.xlsx"-->
+<!--                attachment_use="False"/>-->
+
+    </data>
+</odoo>

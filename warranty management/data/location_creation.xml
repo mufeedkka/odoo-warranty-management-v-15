@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="location_creation" model="stock.location">
+        <field name="name">warranty</field>
+    </record>
+</odoo>
